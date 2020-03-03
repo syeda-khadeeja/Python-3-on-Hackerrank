@@ -1,0 +1,28 @@
+# list on hackerrank
+n=int(input())
+l1=[]
+for i in range(0,n):
+    s=input().split()
+    command=s[0]
+    arguments=s[1:]
+    if command!="print":
+        command+="("+",".join(arguments)+")"
+        eval("l1." + command)
+    else:
+        print(l1)
+# eval method
+x = 1
+print(eval('x + 1'))
+# join operator
+l1=["abbas","ali","ghazi"]
+c=",".join(l1)
+print(c)
+# EXPLAINATION
+#Consider the following input line:
+#insert 1 10
+#So s is the list ["insert", "1", "10"]. Note that the list elements are all strings.
+#So cmd is "insert" and args is ["1", "10"].
+#Now here's the part that you didn't understand. First, ",".join(args) just creates a single string composed of the elements of arg, separated by commas: "1,10".
+#This is then wrapped in parentheses: "(1,10)". Finally, it is appended to cmd resulting in the string "insert(1,10)".
+#It then prepends "l." to this, resulting in the string "l.insert(1,10)". This is then passed to eval.
+#So it's invoking the insert method on the list l, inserting the value 10 at position 1. I.e., it's executing l.insert(1,10).

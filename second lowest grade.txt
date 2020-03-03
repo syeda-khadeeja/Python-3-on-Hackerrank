@@ -1,0 +1,27 @@
+# nested list
+# Given the names and grades for each student in a Physics class of  students, store them in a nested list and print the name(s) of any student(s) having the second lowest grade.
+# Note: If there are multiple students with the same grade, order their names alphabetically and print each name on a new line
+name_list = []
+mark_list = []
+for i in range(int(input())):
+    name_list.append(input())
+mark_list.append(float(input()))
+
+set_mark_list = set(mark_list)
+min_mark = sorted(set_mark_list)[1:2]
+outer_list = []
+
+for name in range(len(name_list)):
+    inner_list = []
+    inner_list.append(name_list[name])
+    inner_list.append(mark_list[name])
+    outer_list.append(inner_list)
+
+lowest_number_name_list = []
+for i in range(len(outer_list)):
+    if mark_list[i] == min_mark[0]:
+        lowest_number_name_list.append(name_list[i])
+
+sorted_list = sorted(lowest_number_name_list, key=str.lower)
+for i in range(len(sorted_list)):
+    print(sorted_list[i])

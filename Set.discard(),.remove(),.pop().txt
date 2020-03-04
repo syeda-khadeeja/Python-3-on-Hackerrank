@@ -1,0 +1,16 @@
+# REMOVE()
+# DISCARD()
+# POP()
+import math
+no_of_element_in_set = int(input())
+s1 =set(map(int, input().split()))
+no_of_command=int(input())
+for i in range(0,no_of_command):
+    a=input().split()
+    com=a[0]
+    arg=a[1:]
+    if com!="print":
+        com += "(" + ",".join(arg) + ")"
+        eval("s1."+com)
+a=sum(s1)
+print(a)

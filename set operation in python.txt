@@ -1,0 +1,31 @@
+# set.union() operator
+
+n=int(input())
+a=set(map(int,input().split()))
+m=int(input())
+b=set(map(int,input().split()))
+print(len(a.union(b)))
+
+# set.intersection() operator
+
+k=int(input())
+a=set(map(int,input().split()))
+y=int(input())
+c=set(map(int,input().split()))
+print(len(a.intersection(c)))
+
+# set.difference() operator
+
+z=int(input())
+a=set(map(int,input().split()))
+x=int(input())
+b=set(map(int,input().split()))
+print(len(a.difference(b)))
+
+# set.symmetric_difference operator
+
+w=int(input())
+a=set(map(int,input().split()))
+u=int(input())
+b=set(map(int,input().split()))
+print(len(a.symmetric_difference(b)))

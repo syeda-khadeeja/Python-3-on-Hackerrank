@@ -1,0 +1,6 @@
+import numpy                  
+def arrays(arr):
+   return numpy.array(arr[::-1],float)  # ::-1 will reverse the array
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)

@@ -1,0 +1,11 @@
+from collections import OrderedDict
+dict=OrderedDict()                       #define empty ordered dictionary, which counts occurences
+for i in range(int(input())):
+    key=input()                                    #If input not in the dictionary, then add it
+    if not key in dict.keys():
+        dict.update({key : 1})
+        continue
+    dict[key] += 1                              # else increment th counter
+
+print(len(dict.keys()))
+print(*dict.values())

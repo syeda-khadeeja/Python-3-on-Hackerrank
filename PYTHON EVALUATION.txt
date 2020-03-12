@@ -1,0 +1,3 @@
+# python evaluation
+a=input()
+(eval(a))

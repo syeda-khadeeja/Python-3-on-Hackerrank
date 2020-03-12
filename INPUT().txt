@@ -1,0 +1,8 @@
+# INPUT METHOD ON HACKERRANK
+import math
+x,k=map(int,input().split())
+a=eval(input())
+if a==k:
+    print(True)
+else:
+    print(False)

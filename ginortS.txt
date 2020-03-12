@@ -1,0 +1,4 @@
+# ginortS
+
+mylist="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1357902468"
+print(*sorted(input(),key= mylist.index),sep="")
